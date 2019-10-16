@@ -1,3 +1,10 @@
 ---
 - include: "package.yml"
 - include: "users.yml"
+
+client:
+  - username:client1
+    password: pwd1
+  
+  - username:client2
+    password: pwd2

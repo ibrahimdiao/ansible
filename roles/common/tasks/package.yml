@@ -4,3 +4,8 @@
     name: dnsutils
     state: present
     
+- name: "Installation"
+  apt: 
+    name: "{{item}}"
+  loop: "{{PackageToInstall]]"
+  
