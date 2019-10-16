@@ -1,0 +1,14 @@
+---
+- name: Ajouter utilisateur 'itesciadmin' dans le groupe 'itescia' et 'sudo' avec génération de clé SSH
+  user:
+    name: itesciadmin
+    comment: Administrateur itescia
+    uid: 1001
+    groups: itescia,sudo
+    append: yes
+    state: present
+- name: Deploy SSH key
+  authorized_key:
+          user: itesciadmin
+          key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHjFknC89z7aXm6CV5NvqT2whXTnAXMX9dvDr8RwTT/t8MjxJ0XlednTj/gqGkJzUiZCfoooAhbXqDiueLZqxtwZtSTGyRumUUcjbSe12QWHq7TE3kPSt/byoThIF67m5thx/dbfqraph/nY/8EJV1BrMjJabDt/JlxxlnK4neh3r5HHn1OkK2YBiLrnBAeiCQT6xLifeMw4AB5HQpy8FA5O0pisOP0QlXxqg8FgNghEtdzhX/fbz7Y1A7IgpHgK4GaJxxjLeQ98VXJK8jzcPrsFXj5RsbWiAfVxGK11BCwbFV81jK2fflvxKuVzYlgF/ytwox/2Lbt7AecxXsn4KN root@srvlinux01'
+

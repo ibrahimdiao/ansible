@@ -1,0 +1,6 @@
+---
+- name: install dnsutils
+  package:
+    name: dnsutils
+    state: present
+    
